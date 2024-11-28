@@ -43,8 +43,8 @@ public class AdminsController extends BaseController
         Example example = new Example(Admins.class); //  创建一个扩展搜索类
         Example.Criteria criteria = example.createCriteria();          // 创建一个扩展搜索条件类
         String where = " 1=1 ";   // 创建初始条件为：1=1
-        where += getWhere();      // 从方法中获取url 上的参数，并写成 sql条件语句
-        criteria.andCondition(where);   // 将条件写进上面的扩展条件类中
+        where += getWhere();      // 从方法中获取url 上的参数l条件语句
+        criteria.andCondition(where);   // 将条件写进上面的扩展条件类中，并写成 sq
         if(sort.equals("desc")){        // 判断前台提交的sort 参数是否等于  desc倒序  是则使用倒序，否则使用正序
             example.orderBy(order).desc();  // 把sql 语句设置成倒序
         }else{
